@@ -38,7 +38,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  overflow-y: auto !important;
+  overflow-y: hidden !important;
   overflow-x: hidden !important;
 }
 
@@ -105,3 +105,11 @@ select {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+div.container {
+  scroll-snap-type: y mandatory;
+}
+
+section.section {
+  scroll-snap-align: start;
+}

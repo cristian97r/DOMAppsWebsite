@@ -1,8 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+.container {
+  scroll-snap-type: mandatory;
+  height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+
+.container::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #49a7b8;
+}
+
+
 .section {
   height: 100vh;
   margin-bottom: -165px;
+  scroll-snap-align: start;
 }
 
 hr {
@@ -30,17 +52,17 @@ hr {
 
 .img1 {
   height: 382px;
-  position: absolute;
-  top: 350px;
-  right: 100px;
-  z-index: -1;
+  position: relative;
+  top: -121px;
+  right: -48px;
+  z-index: 0;
 }
 .img2 {
   height: 382px;
-    position: absolute;
-    top: 109px;
-    right: 188px;
-    z-index: -1;
+  position: relative;
+  top: 109px;
+  right: 286px;
+  z-index: -1;
 }
 
 .title1 {
@@ -79,17 +101,17 @@ strong {
 
 .img4 {
   height: 382px;
-    position: absolute;
-    top: 122vh;
-    left: 13vw;
-    z-index: 0;
+  position: relative;
+  top: 100px;
+  left: 13vw;
+  z-index: 0;
 }
 
 .img5 {
   height: 382px;
-  position: absolute;
-  top: 158vh;
-  left: 10vw;
+  position: relative;
+  top: 350px;
+  left: -482px;
   z-index: -1;
 }
 
@@ -142,6 +164,7 @@ strong {
   color: #595959;
   margin: auto;
   margin-bottom: 25px;
+  padding-top: 16vh;
 
   strong {
     color: #1C7FC3;
@@ -190,8 +213,8 @@ strong {
   text-align: center;
   color: #595959;
   margin: auto;
-  margin-bottom: 25px;
-  margin-top: 20vh;
+  margin-top: 22vh;
+  padding-top: 15vh;
 
   strong {
     color: #1C7FC3;
@@ -203,5 +226,25 @@ strong {
   height: 382px;
   width: fit-content;
   margin: auto;
+  margin-top: 28vh;
+}
+
+$breakpoint-tablet: 1505px;
+@media (max-width: $breakpoint-tablet) {
+  .title1 {
+    font-size: 25px;
+    width: 48vw;
+  }
+  .title2 {
+    font-size: 25px;
+    width: 48vw;
+  }
+  .title3 {
+    font-size: 25px;
+  }
+  .title4 {
+    font-size: 25px;
+    width: 48vw;
+  }
 }
 
